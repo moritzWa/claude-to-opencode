@@ -24,7 +24,7 @@ cd claude-to-opencode
 ./install.sh move-to-cursor-opencode  # or under another name
 ```
 
-Requires Python 3 and `opencode` on your PATH. Start a new Claude Code session after installing so it picks up the command.
+Requires Python 3 and `opencode` on your PATH. opencode asks before touching files outside the project, which interrupts a handed-off session; add `"permission": "allow"` to `~/.config/opencode/opencode.jsonc` to turn every prompt off. Start a new Claude Code session after installing so it picks up the command.
 
 ## Using a Cursor subscription in opencode
 
