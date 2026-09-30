@@ -1,0 +1,10 @@
+---
+name: __NAME__
+description: Hand this Claude Code session over to opencode. Starts a headless opencode session in the same directory with the transcript attached. Optional argument is the opencode model, e.g. anthropic/claude-sonnet-5-5.
+disable-model-invocation: true
+allowed-tools: Bash(python3 __SCRIPT__:*)
+---
+
+!`python3 __SCRIPT__ $ARGUMENTS 2>&1`
+
+Relay the output above to the user in one line. Do nothing else.
