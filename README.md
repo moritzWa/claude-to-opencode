@@ -11,7 +11,7 @@ What it does:
 
 1. Converts the session's transcript (`~/.claude/projects/*/<session-id>.jsonl`) to markdown: user messages, assistant replies and tool calls. Thinking blocks are dropped, long tool output is truncated, and `<system-reminder>` noise is stripped.
 2. Saves it to `~/.claude/handoffs/<session-id>.md`.
-3. Runs `opencode run --dir <session cwd> --title "<claude title> (from Claude Code)" -f <transcript>` in the background. The new session reads the transcript, summarizes where you left off, and waits for you.
+3. Runs `opencode run --dir <session cwd> --title <title> -f <transcript>` in the background. The title is the session's name in Claude Code, else Claude's own title for it, else 3 to 6 words written by Claude Haiku from your first messages. The new session reads the transcript, summarizes where you left off, and waits for you.
 
 It never opens a terminal window, so it works from any terminal. Pick the session up in opencode's session list (`ctrl+x l`), or in a multi-agent dashboard like [Open Agent View](https://open-agent-view.github.io/) with `oav --include-external`.
 
